@@ -1,3 +1,5 @@
+![Rate Limit This cover](assets/cover.png)
+
 # Rate Limit This
 
 A human-first rate-limit design skill for Codex and Claude Code, built for
