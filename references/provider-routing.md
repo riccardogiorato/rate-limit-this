@@ -28,7 +28,7 @@ change.
 - **Platform-native protection already available:** use it as the primary
   control when the approved policy is coarse enough for its identity, window,
   exemption, outage, response, and observability capabilities. Use WAF or edge
-  rules as defense in depth—not as a silent replacement—when the policy needs
+  rules as defense in depth rather than as a silent replacement when the policy needs
   application-authenticated identity or action-specific recovery behavior.
 - **No suitable backend:** recommend the smallest operational addition. Upstash
   is often appropriate for serverless JavaScript, but it is not mandatory.

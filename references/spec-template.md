@@ -36,7 +36,7 @@ The money, capacity, security boundary, or user experience being protected.
 
 ## Limiter details
 
-### RL-01 — Descriptive name
+### RL-01: Descriptive name
 
 - **User policy:** What users may do, in plain language.
 - **Protected resource:** What this prevents from being exhausted or abused.

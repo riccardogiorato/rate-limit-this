@@ -3,7 +3,7 @@
 # Rate Limit This
 
 A human-first rate-limit design skill for Codex and Claude Code, built for
-JavaScript and TypeScript applications—especially Next.js.
+JavaScript and TypeScript applications, especially Next.js.
 
 It audits the real abuse and cost surfaces, asks only the policy questions that
 code cannot answer, and writes one reviewable `RATE_LIMITS.md` before any

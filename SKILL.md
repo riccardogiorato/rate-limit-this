@@ -1,6 +1,6 @@
 ---
 name: rate-limit-this
-description: Audit a JavaScript or TypeScript web app—especially Next.js—for abuse and rate-limit surfaces, ask the human only material policy questions, write a root RATE_LIMITS.md for review, and route an explicitly approved specification to a fresh implementation agent. Invoke manually to design fair usage policies, choose protections suited to the existing stack, or implement a reviewed rate-limit contract.
+description: Audit a JavaScript or TypeScript web app, especially Next.js, for abuse and rate-limit surfaces, ask the human only material policy questions, write a root RATE_LIMITS.md for review, and route an explicitly approved specification to a fresh implementation agent. Invoke manually to design fair usage policies, choose protections suited to the existing stack, or implement a reviewed rate-limit contract.
 ---
 
 # Rate Limit This
@@ -125,7 +125,7 @@ dependencies, schemas, or platform configuration.
 
 Always hand implementation to a fresh subagent with a prompt that explicitly
 identifies it as the implementation agent for the approved contract. Give it
-the approved `RATE_LIMITS.md`, repository instructions, and codebase—not the
+the approved `RATE_LIMITS.md`, repository instructions, and codebase, not the
 unresolved planning conversation. Require it to preserve the approved policy
 and report any necessary deviation before acting. If the host cannot create
 subagents, stop and ask the human to begin a fresh implementation task/session
