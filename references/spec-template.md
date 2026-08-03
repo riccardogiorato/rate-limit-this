@@ -43,7 +43,8 @@ The money, capacity, security boundary, or user experience being protected.
 - **Scope:** The conceptual request or workflow boundary; avoid fragile code
   paths when domain language is clearer.
 - **Counting point:** Which attempt, job start, successful completion, unit of
-  cost, or concurrent lease consumes capacity.
+  cost, or concurrent lease consumes capacity. If invalid requests do not
+  count, define the validation boundary and what makes an input valid.
 - **Identity:** User, account, hashed API identity, IP, or approved combination.
 - **Identity source:** The server-verified source and normalization/fallback
   rules, including trusted-proxy rules for IP identities.

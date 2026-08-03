@@ -1,6 +1,6 @@
 interface:
   display_name: "Rate Limit This"
-  short_description: "Design human-approved application rate limits"
-  default_prompt: "Use $rate-limit-this to audit this app and draft a root RATE_LIMITS.md, then stop for my review."
+  short_description: "Audit, discuss, and implement app rate limits"
+  default_prompt: "Use $rate-limit-this to audit this app, help me decide what should and should not be rate limited, and draft RATE_LIMITS.md for my approval."
 policy:
   allow_implicit_invocation: false

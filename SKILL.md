@@ -5,9 +5,9 @@ description: Audit a JavaScript or TypeScript web app, especially Next.js, for a
 
 # Rate Limit This
 
-Use a human-first, two-gate workflow. Discover likely limits before asking
-questions. Write the policy as a durable contract before changing code. Never
-combine policy drafting and implementation in one agent context.
+Use two steps: first audit the app and agree on what should and should not be
+rate limited, then implement the approved limits in a fresh agent context.
+Write the agreed policy as a durable contract before changing code.
 
 ## Route the run
 
@@ -25,7 +25,7 @@ reason to stop and repair the contract, not permission to implement.
 - `complete`: treat a new invocation as a request to audit or revise the limits;
   never silently reopen implementation.
 
-## Phase 1: design the limits
+## Step 1: audit and agree on the limits
 
 ### 1. Audit the application
 
@@ -114,7 +114,7 @@ questions** section. Record the approved revision, who approved, and when in
 changes. Feedback, silence, approval of one limiter, or a request to continue
 does not approve the whole contract.
 
-## Phase 2: implement the approved contract
+## Step 2: implement the approved limits
 
 ### 5. Route the implementation
 
@@ -135,7 +135,7 @@ implementation in the planning context.
 Before implementing, the fresh agent must confirm that the status is
 `approved`, `approved_revision` matches `revision`, approval metadata is
 present, the review record covers that revision, and **Open questions** is
-empty. Otherwise return to Phase 1.
+empty. Otherwise return to Step 1.
 
 Creating an account, database, credential, OAuth grant, or deployment secret
 requires action-time human confirmation even when the provider is approved in
@@ -156,6 +156,11 @@ Use the verification depth approved in the spec.
 - **Thorough**: extend existing automated tests for identities, exemptions,
   headers, reset behavior, and backend failure modes, plus a safe provider smoke
   test when credentials exist.
+
+When the contract says malformed requests do not consume capacity, validate the
+required fields and types before admission. Successful JSON parsing alone does
+not make a request valid. Test valid JSON with an invalid shape as well as JSON
+parse failures.
 
 Do not introduce a test framework solely for rate limiting. Document checks
 that could not run rather than pretending they passed.
