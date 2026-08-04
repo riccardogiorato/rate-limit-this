@@ -20,11 +20,11 @@ change.
   client and runtime; do not introduce a second Redis provider without reason.
 - **Convex application:** prefer the maintained Convex rate-limiter component
   or a current documented Convex-native pattern.
-- **Prisma, Neon, Postgres, or Supabase already operational:** consider a
-  database-backed design only when an atomic server-side operation, cleanup or
-  expiry, hot-key contention, latency, and serverless connection behavior are
-  acceptable. The presence of an ORM alone is not enough, and a read-then-write
-  counter is not atomic.
+- **Prisma, Neon, PlanetScale, Postgres, MySQL, or Supabase already
+  operational:** consider a database-backed design only when an atomic
+  server-side operation, cleanup or expiry, hot-key contention, latency, and
+  serverless connection behavior are acceptable. The presence of an ORM alone
+  is not enough, and a read-then-write counter is not atomic.
 - **Platform-native protection already available:** use it as the primary
   control when the approved policy is coarse enough for its identity, window,
   exemption, outage, response, and observability capabilities. Use WAF or edge
